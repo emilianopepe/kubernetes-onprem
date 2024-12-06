@@ -1,0 +1,13 @@
+token: ******************************
+tls-san:
+  - *********************************
+write-kubeconfig-mode: "0600"
+etcd-expose-metrics: true
+disable-kube-proxy: true
+kubelet-arg:
+  - "cloud-provider=external"
+cloud-provider-name: rancher-vsphere
+cni:
+  - cilium
+disable:
+  - rke2-ingress-nginx
