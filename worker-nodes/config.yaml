@@ -1,0 +1,2 @@
+server: https://***********************:9345
+token: "run 'cat /var/lib/rancher/rke2/server/node-token' on the control plane"
