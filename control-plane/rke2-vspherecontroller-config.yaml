@@ -1,0 +1,33 @@
+apiVersion: helm.cattle.io/v1
+kind: HelmChartConfig
+metadata:
+  name: rancher-vsphere-cpi
+  namespace: kube-system
+spec:
+  valuesContent: |-
+    vCenter:
+      host: "name or IP of vcenter"
+      port: 443
+      insecureFlag: true
+      datacenters: "names of Data Center"
+      username: "name of vmware service account"
+      password: "pwd"
+      credentialsSecret:
+        name: "vsphere-cpi-creds"
+        generate: true
+---
+apiVersion: helm.cattle.io/v1
+kind: HelmChartConfig
+metadata:
+  name: rancher-vsphere-csi
+  namespace: kube-system
+spec:
+  valuesContent: |-
+    vCenter:
+      host: "name or IP of vcenter"
+      port: 443
+      insecureFlag: true
+      clusterId: "random-name"
+      datacenters: "names of Data Center"
+      username: "name of vmware service account"
+      password: "pwd"
