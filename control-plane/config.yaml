@@ -9,5 +9,3 @@ kubelet-arg:
 cloud-provider-name: rancher-vsphere
 cni:
   - cilium
-disable:
-  - rke2-ingress-nginx
